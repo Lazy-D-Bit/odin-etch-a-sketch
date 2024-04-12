@@ -2,8 +2,8 @@ canvas(10);
 
 const button = document.getElementById("num");
 button.addEventListener("click", function() {
-    const num = prompt("Enter GRID size (size limit: 0 < size <= 100):");
-
+    let num = prompt("Enter GRID size (size limit: 0 < size <= 100):");
+    num = validInput(num)
     deleteCanvas();
     canvas(num);
 })
@@ -36,4 +36,11 @@ function deleteCanvas() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
+}
+function validInput(num) {
+    if (num < 1 || num > 100) {
+        num = prompt("Enter VALID GRID size (size limit: 0 < size <= 100):");
+        validInput(num);
+    }
+    return num;
 }
