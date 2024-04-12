@@ -9,8 +9,12 @@ for (let j = 0; j < 16; j++) {
         const square = document.createElement("div");
         square.style.width = "25px";
         square.style.height = "25px";
-        square.style.backgroundColor = "lightblue";
+        square.style.backgroundColor = "#eeeeee";
         square.style.border="2px solid black";
         row.appendChild(square);
+        square.addEventListener("mouseover", function() {
+            square.style.backgroundColor = "#3d85c6";
+        });
     }
 }
+
