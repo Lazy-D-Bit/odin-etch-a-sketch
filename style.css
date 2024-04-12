@@ -3,7 +3,10 @@ body {
 }
 #container {
     position: fixed;
+    width: 960px;
+    height: 960px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
 }
